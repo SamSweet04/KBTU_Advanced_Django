@@ -16,6 +16,7 @@ class Author(Base):
     birth_date: Mapped[date]
     books: Mapped[list['Book']] = relationship('Book', back_populates='author')
 
+
 class Book(Base):
     __tablename__ = 'books'
 

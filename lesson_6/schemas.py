@@ -1,6 +1,4 @@
-To avoid the recursion error, you can modify the `Author` and `Publisher` models to exclude the `books` field when serializing. Here's the modified code:
 
-```python
 from datetime import date
 from pydantic import BaseModel
 
@@ -70,6 +68,3 @@ class Publisher(BasePublisher):
 
 class CreatePublisher(BasePublisher):
     pass
-```
-
-In this modification, the `books` field is excluded from the `Author`, `Genre`, and `Publisher` models when they are serialized, which should resolve the recursion error.

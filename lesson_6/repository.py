@@ -15,6 +15,7 @@ class AbcRepository:
     def get_by_id(self, id: int) -> Author | Book | Publisher | Genre:
         raise NotImplementedError
 
+
 class AuthorRepository(AbcRepository):
     def __init__(self, session: Session):
         self._session = session

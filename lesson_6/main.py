@@ -24,6 +24,7 @@ def get_container(repository: type[AbcRepository]) -> punq.Container:
     container.register(Dependency)
     return container
 
+
 @app.post("/authors")
 def add_author(author: CreateAuthor) -> str:
     session.add(db.Author(**author.dict()))
